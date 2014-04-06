@@ -3,8 +3,31 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Front End
+gem 'bootstrap-sass'
+gem 'sass', '3.2.13'
+
+# User auth
+gem 'devise'
+
+# Other
+gem 'haml'
+gem 'haml-rails'
+
+group :development, :test do
+  gem 'rails_layout'
+  gem 'sqlite3', '1.3.8'
+  # Mute asset pipeline
+  gem 'quiet_assets'
+  # Testing/debugging purposes
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
