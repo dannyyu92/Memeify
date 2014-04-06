@@ -3,12 +3,15 @@
     %h3 Sign up
     = devise_error_messages!
     .form-group
-      = f.label :email
-      = f.email_field :email, :autofocus => true, class: 'form-control'
+      = f.label :username
+      = f.text_field :username, :autofocus => true, class: 'form-control'
     .form-group
       = f.label :password
       = f.password_field :password, class: 'form-control'
     .form-group
       = f.label :password_confirmation
       = f.password_field :password_confirmation, class: 'form-control'
+    .form-group
+      = f.label :email
+      = f.email_field :email, :autofocus => true, class: 'form-control'
     = f.submit 'Sign up', :class => 'button right'
