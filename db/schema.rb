@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140406060827) do
   create_table "comments", force: true do |t|
     t.integer  "meme_id"
     t.text     "body"
-    t.integer  "hearts",     default: 0
+    t.integer  "hearts"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"

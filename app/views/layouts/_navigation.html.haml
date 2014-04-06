@@ -1,6 +1,8 @@
 .navbar.navbar-default.navbar-static-top{:role => "navigation"}
   .container
     .navbar-header
+      /%a{id:'logo-circle' href:'.'} MM
+      =link_to "MM", root_path, id: 'logo-circle'
       %button.navbar-toggle{ data: { toggle:"collapse", target:"#collapsed-navbar" } } 
         %span.sr-only
           Toggle Navigation
