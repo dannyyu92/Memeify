@@ -1,6 +1,7 @@
-%p#notice= notice
+.container
+  = image_tag @meme.avatar.url(:large)
 
-
-= link_to 'Edit', edit_meme_path(@meme)
-\|
-= link_to 'Back', memes_path
+  .text-right
+    = link_to "Back", memes_path, class: "btn btn-md btn-default"
+    - if current_user.id == @meme.user_id
+      = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default"

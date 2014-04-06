@@ -1,21 +1,8 @@
-%h1 Listing memes
-
-- @memes.each do |m|
-  = image_tag m.avatar.url(:medium)
-
-
-%table
-  %tr
-    %th
-    %th
-    %th
-
-  - @memes.each do |meme|
-    %tr
-      %td= link_to 'Show', meme
-      %td= link_to 'Edit', edit_meme_path(meme)
-      %td= link_to 'Destroy', meme, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Meme', new_meme_path
+.container
+  = link_to 'Add A Meme', new_meme_path, class: "btn btn-md btn-default pull-right"
+  %h1 Top Memes:
+  .row
+    .col-md-12
+    - @memes.each do |m|
+      .col-md-4
+        = link_to image_tag(m.avatar.url(:thumb)), m

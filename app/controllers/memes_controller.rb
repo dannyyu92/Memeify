@@ -10,11 +10,15 @@ class MemesController < ApplicationController
   # GET /memes/1
   # GET /memes/1.json
   def show
+
   end
 
   # GET /memes/new
   def new
     @meme = Meme.new
+    if user_signed_in?
+      @meme.user_id = current_user.id
+    end
   end
 
   # GET /memes/1/edit
@@ -25,6 +29,9 @@ class MemesController < ApplicationController
   # POST /memes.json
   def create
     @meme = Meme.new(meme_params)
+    if user_signed_in?
+      @meme.user_id = current_user.id
+    end
 
     respond_to do |format|
       if @meme.save
