@@ -1,8 +1,8 @@
 .container
   .text-right
-    = link_to "Back", memes_path, class: "btn btn-md btn-default"
+    = link_to "Back", memes_path, class: "button", style: "width: 70px;"
     - if current_user.id == @meme.user_id
-      = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default"
+      = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default", class: "button", style: "width: 70px;"
   = image_tag @meme.avatar.url(:large)
   %p{ class: "top-comment text-center" }
     = @top_comment

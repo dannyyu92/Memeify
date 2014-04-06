@@ -186,15 +186,29 @@ img {
   @extend .bg-info;
 }
 
+.meme-img {
+  padding-bottom:50px;
+}
+
+.top-comment {
+  font-size: 3em;
+  margin-bottom:30px;
+}
+
 
 .background{
-  background: url("/images/2245043296_198ffd4917_o.jpg");
-  background-size: auto 170%;
+  background: url("/images/3.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-width: 320px;
   margin: auto;
   height: 100%;
   width: 100%;
   position: absolute;
+  @import "demo";
+  @import "style4";
 }
 
 .row{
