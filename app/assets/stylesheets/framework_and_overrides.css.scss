@@ -64,14 +64,14 @@ body {
 
 #login-panel {
   margin-top: 120px;
-  background-color: rgba(0, 0, 0, 0.64);
+  background-color: rgba(0, 0, 0, 0.69);
   padding: 22px;
 }
 
 .login-label {
   color: #fff;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 100 !important;
 }
 
 
@@ -82,17 +82,38 @@ body {
 }
 
 #logo {
-  padding: 60px 0px;
+  padding: 40px 0 40px 0;
   color: #fff;
   text-align: center;
+  font-family: "Lato";
+  font-weight: 800;
+  @media (min-width: 979px) { 
+    font-size: 5em; 
+  }
+  @media (max-width: 979px) {
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+  text-transform: uppercase;
+}
+
+#logo-circle {
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
   font-family: "Lato";
   @media (min-width: 979px) { 
     font-size: 5em; 
   }
   @media (max-width: 979px) {
     font-size: 2em;
+    letter-spacing: 3px;
   }
   text-transform: uppercase;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 .login-field input {
