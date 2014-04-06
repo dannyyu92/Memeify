@@ -128,6 +128,11 @@ footer {
   }
 }
 
+// Comment Form
+.comment-area {
+  resize: none;
+}
+
 // Import the CSS framework
 @import "bootstrap";
 
@@ -144,4 +149,39 @@ img {
   margin-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
+  background: rgba(184,184,184,.75); 
+  @extend .col-xs-8;
+  @extend .col-xs-offset-2;
+  @extend .col-sm-4;
+  @extend .col-sm-offset-4;
+  @extend .col-md-4;
+  @extend .col-md-offset-4;
+  @extend .bg-info;
+}
+
+
+.background{
+  background: url("/images/2245043296_198ffd4917_o.jpg");
+  background-size: auto 170%;
+  min-width: 320px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.row{
+  margin: 5% auto;
+}
+
+body{
+  overflow:hidden;
+}
+
+.button{
+  width:100%;
+  margin-top: 10px;
+  @extend .btn;
+  @extend .btn-info;
+  @extend .sub_btn;
 }

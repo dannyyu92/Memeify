@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  memes_id: 
+  body: 
+  hearts: 1
+
+two:
+  memes_id: 
+  body: 
+  hearts: 1
