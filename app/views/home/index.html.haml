@@ -1,4 +1,8 @@
-.container
+.container-fluid
+  
+  .bg
+  .page-header.center
+    %h1{id:'logo'} Memify
   = form_tag session_path(:user) do
     = text_field_tag 'user[username]'
     = password_field_tag 'user[password]'

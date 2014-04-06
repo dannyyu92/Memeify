@@ -27,6 +27,23 @@ a#navbar-brand {
 $btn-default-bg: #FFF;
 
 // Landing page
+
+.bg {
+  -webkit-background-size: cover;
+  background:url('https://farm4.staticflickr.com/3785/13616647304_bb091dc17a_h.jpg') no-repeat center center fixed;
+  -webkit-filter:blur(5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+body {
+  background: transparent !important;
+}
+
 .intro {
   background-image:url("./intro-bg.jpg");
   background-repeat:no-repeat;
@@ -43,6 +60,21 @@ $btn-default-bg: #FFF;
       font-size:2em; 
     }
   }
+}
+
+
+
+
+.center {
+  width: 100%;
+  min-height: 100%;
+  min-width: 1024px;
+}
+
+#logo {
+  font-size: 9em;
+  padding-top: 120px;
+  color: #313131;
 }
 
 // Footer
@@ -70,4 +102,13 @@ footer {
 img {
   @extend .img-responsive;
   margin: 0 auto;
+}
+
+.authform{
+  /*
+  width:300px;
+  margin: 10px auto;*/
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
 }
