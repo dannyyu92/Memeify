@@ -159,6 +159,15 @@ img {
   @extend .bg-info;
 }
 
+.meme-img {
+  padding-bottom:50px;
+}
+
+.top-comment {
+  font-size: 3em;
+  margin-bottom:30px;
+}
+
 
 .background{
   background: url("/images/3.jpg") no-repeat center center fixed; 
