@@ -199,9 +199,20 @@ img {
   padding-bottom:50px;
 }
 
+@font-face {
+  font-family: 'MemeFont';
+  src: url('/fonts/impactreg.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('myfont.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 .top-comment {
-  font-size: 3em;
-  margin-bottom:30px;
+  font-size: 4em;
+  color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-family: 'MemeFont', Fallback, sans-serif;
+  position: relative;
+  bottom: 435px;
 }
 .checkbox input{
   &[type="checkbox"]{
@@ -240,3 +251,5 @@ body{
   @extend .btn-info;
   @extend .sub_btn;
 }
+
+
