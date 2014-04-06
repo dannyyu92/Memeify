@@ -11,8 +11,7 @@
         = password_field_tag 'user[password]'
       .checkbox
         = check_box_tag 'user[remember_me]'
-        %p
-          = label_tag 'user[remember_me]', 'Remember me', { class: "login-label" }
+        = label_tag 'user[remember_me]', 'Remember me', { class: "login-label" }
       .login-field
         %button.button "Sign in"
       .login-field
