@@ -161,8 +161,11 @@ img {
 
 
 .background{
-  background: url("/images/2245043296_198ffd4917_o.jpg");
-  background-size: auto 170%;
+  background: url("/images/2245043296_198ffd4917_o.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-width: 320px;
   margin: auto;
   height: 100%;
