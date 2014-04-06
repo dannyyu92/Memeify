@@ -1,6 +1,4 @@
 .container
-  .text-left
-
   .text-right
     = form_tag meme_path(@meme.id), :method => :get do
       = text_field :email_to, nil, placeholder: "user@example.com"
