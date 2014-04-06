@@ -171,6 +171,8 @@ img {
   height: 100%;
   width: 100%;
   position: absolute;
+  @import "demo";
+  @import "style2";
 }
 
 .row{
