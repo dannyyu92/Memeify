@@ -5,8 +5,15 @@ class MemesController < ApplicationController
     @memes = Meme.all
   end
 
-    def show
+  def show
     @comment = Comment.new
+    @top_comment = Comment.where(meme_id: @meme.id).order("hearts DESC").first.body
+    if params[:add_heart].present?
+      @comment = Comment.where(username: current_user.username).first
+      @comment.hearts += 1
+      @comment.save
+      redirect_to meme_path(@meme.id)
+    end
   end
 
     def new

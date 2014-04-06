@@ -1,4 +1,8 @@
 .well.well-small
   = comment.username
+  [ #{comment.hearts} ]
+  = link_to meme_path(comment.id, :add_heart => "true"), class: "btn btn-sm btn-danger pull-right", id: "heart-button" do
+    Heart
+    %span{ class: "glyphicon glyphicon-heart" }
   %h4
     = comment.body
