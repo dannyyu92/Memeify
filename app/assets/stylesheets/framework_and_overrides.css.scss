@@ -111,4 +111,25 @@ img {
   margin-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
+  background: rgba(184,184,184,.75); 
+}
+
+/*
+.background{
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}*/
+
+.row{
+  margin: 5% auto;
+}
+
+#signup{
+  background: url("/images/2245043296_198ffd4917_o.jpg");
+  background-size: auto 170%;
+  height: 100%;
+  min-width: 320px;
+  margin: auto;
 }
