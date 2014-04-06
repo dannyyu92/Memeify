@@ -1,5 +1,4 @@
-%h1 New meme
-
-= render 'form'
-
-= link_to 'Back', memes_path
+.container
+  %h1 Choose meme:
+  = render 'form'
+  = link_to 'Back', memes_path, class: "button pull-right", style: "width: 70px;"
