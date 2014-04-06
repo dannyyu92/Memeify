@@ -193,6 +193,12 @@ img {
   @extend .col-md-4;
   @extend .col-md-offset-4;
   @extend .bg-info;
+  p{
+    text-align: center;
+  }
+  h3{
+    text-align: center;
+  }
 }
 
 .meme-img {
@@ -231,7 +237,7 @@ img {
 
 
 .background{
-  background: url("/images/3.jpg") no-repeat center center fixed; 
+  background: url("/images/10.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -243,6 +249,24 @@ img {
   position: absolute;
   @import "demo";
   @import "style4";
+}
+
+.background_1{
+  @extend .background;
+  background: url("/images/5.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.background_2{
+  @extend .background;
+  background: url("/images/7.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .row{

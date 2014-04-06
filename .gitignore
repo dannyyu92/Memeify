@@ -23,3 +23,6 @@ doc/
 /.bundle
 /vendor/bundle
 
+
+# Ignore application configuration
+/config/application.yml

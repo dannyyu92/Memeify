@@ -6,6 +6,7 @@ class MemesController < ApplicationController
   end
 
   def show
+    # Comment Logic (Hackathon ugliness :( )
     @comment = Comment.new
     if !Comment.where(meme_id: @meme.id).order("hearts DESC").first.nil?
       @top_comment = Comment.where(meme_id: @meme.id).order("hearts DESC").first.body
@@ -14,6 +15,36 @@ class MemesController < ApplicationController
       @comment = Comment.where(id: params[:comment_id]).first
       @comment.hearts += 1
       @comment.save
+      redirect_to meme_path(@meme.id)
+    end
+
+    if params[:email_to].present?
+=begin
+      # Sendgrid API - NEED PROVISION KEY
+      Mail.defaults do
+        delivery_method :smtp, { :address   => "smtp.sendgrid.net",
+                                 :port      => 587,
+                                 :domain    => "memify-app.herokuapp.com",
+                                 :user_name => ENV["SENDGRID_USERNAME"],
+                                 :password  => ENV["SENDGRID_PW"],
+                                 :authentication => 'plain',
+                                 :enable_starttls_auto => true }
+      end
+
+      mail = Mail.deliver do
+        to "params[:email_to]"
+        from '#{current_user.username} <#{current_user.email}>'
+        subject 'Check this out on Memify!'
+        text_part do
+          body 'http://memify-app.herokuapp.com/memes/#{meme.id}'
+        end
+        html_part do
+          content_type 'text/html; charset=UTF-8'
+          body '<b>Memify.</b>'
+        end
+      end
+=end
+      flash[:notice] = "Email successfully shared"
       redirect_to meme_path(@meme.id)
     end
   end

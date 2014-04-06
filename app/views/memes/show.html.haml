@@ -1,5 +1,9 @@
 .container
   .text-right
+    = form_tag meme_path(@meme.id), :method => :get do
+      = text_field :email_to, nil, placeholder: "user@example.com"
+      = submit_tag "Share Link", style: "width: 90px;"
+
     = link_to "Back", memes_path, class: "button", style: "width: 70px;"
     - if current_user.id == @meme.user_id
       = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default", class: "button", style: "width: 70px;"
