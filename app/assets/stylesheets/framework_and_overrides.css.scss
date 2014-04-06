@@ -199,6 +199,11 @@ img {
   padding-bottom:50px;
 }
 
+.col-md-4 {
+  width: 30% !important;
+  min-height: 175px !important;
+}
+
 @font-face {
   font-family: 'MemeFont';
   src: url('/fonts/impactreg.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
