@@ -1,32 +1,24 @@
 class MemesController < ApplicationController
   before_action :set_meme, only: [:show, :edit, :update, :destroy]
 
-  # GET /memes
-  # GET /memes.json
   def index
     @memes = Meme.all
   end
 
-  # GET /memes/1
-  # GET /memes/1.json
-  def show
-
+    def show
+    @comment = Comment.new
   end
 
-  # GET /memes/new
-  def new
+    def new
     @meme = Meme.new
     if user_signed_in?
       @meme.user_id = current_user.id
     end
   end
 
-  # GET /memes/1/edit
-  def edit
+    def edit
   end
 
-  # POST /memes
-  # POST /memes.json
   def create
     @meme = Meme.new(meme_params)
     if user_signed_in?
@@ -43,9 +35,7 @@ class MemesController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /memes/1
-  # PATCH/PUT /memes/1.json
+  
   def update
     respond_to do |format|
       if @meme.update(meme_params)
@@ -58,8 +48,6 @@ class MemesController < ApplicationController
     end
   end
 
-  # DELETE /memes/1
-  # DELETE /memes/1.json
   def destroy
     @meme.destroy
     respond_to do |format|

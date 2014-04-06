@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406034331) do
+ActiveRecord::Schema.define(version: 20140406060827) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "meme_id"
+    t.text     "body"
+    t.integer  "hearts"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username"
+  end
 
   create_table "memes", force: true do |t|
     t.datetime "created_at"

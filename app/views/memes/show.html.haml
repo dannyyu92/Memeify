@@ -1,7 +1,9 @@
 .container
-  = image_tag @meme.avatar.url(:large)
-
   .text-right
     = link_to "Back", memes_path, class: "btn btn-md btn-default"
     - if current_user.id == @meme.user_id
       = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default"
+  = image_tag @meme.avatar.url(:large)
+  .col-md-8.col-md-offset-2
+    = render partial: "memes/comment", collection: @meme.comments
+    = render "comments/form"
