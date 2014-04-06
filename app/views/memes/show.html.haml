@@ -4,6 +4,8 @@
     - if current_user.id == @meme.user_id
       = link_to "Delete", @meme, confirm: "Are you sure?", :method => :delete, class: "btn btn-md btn-default"
   = image_tag @meme.avatar.url(:large)
+  %p{ class: "top-comment text-center" }
+    = @top_comment
   .col-md-8.col-md-offset-2
-    = render partial: "memes/comment", collection: @meme.comments
+    = render partial: "memes/comment", collection: @meme.comments.order("hearts DESC")
     = render "comments/form"
