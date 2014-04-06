@@ -8,6 +8,8 @@ Memeify::Application.routes.draw do
   resources :memes do
     resources :comments
   end
+
+  get 'about' => 'home#about'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
