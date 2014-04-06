@@ -1,5 +1,5 @@
 // Fonts
-@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,800,900);
 $font-family-base: "Lato";
 
 // Colors
@@ -62,7 +62,17 @@ body {
   }
 }
 
+#login-panel {
+  margin-top: 120px;
+  background-color: rgba(0, 0, 0, 0.64);
+  padding: 22px;
+}
 
+.login-label {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
 
 
 .center {
@@ -72,9 +82,37 @@ body {
 }
 
 #logo {
-  font-size: 9em;
-  padding-top: 120px;
-  color: #313131;
+  padding: 60px 0px;
+  color: #fff;
+  text-align: center;
+  font-family: "Lato";
+  @media (min-width: 979px) { 
+    font-size: 5em; 
+  }
+  @media (max-width: 979px) {
+    font-size: 2em;
+  }
+  text-transform: uppercase;
+}
+
+.login-field input {
+  &[type="text"],&[type="password"]{
+    width: 100%;
+  }
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  margin-bottom: 10px;  
 }
 
 // Footer
@@ -111,4 +149,39 @@ img {
   margin-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
+  background: rgba(184,184,184,.75); 
+  @extend .col-xs-8;
+  @extend .col-xs-offset-2;
+  @extend .col-sm-4;
+  @extend .col-sm-offset-4;
+  @extend .col-md-4;
+  @extend .col-md-offset-4;
+  @extend .bg-info;
+}
+
+
+.background{
+  background: url("/images/2245043296_198ffd4917_o.jpg");
+  background-size: auto 170%;
+  min-width: 320px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.row{
+  margin: 5% auto;
+}
+
+body{
+  overflow:hidden;
+}
+
+.button{
+  width:100%;
+  margin-top: 10px;
+  @extend .btn;
+  @extend .btn-info;
+  @extend .sub_btn;
 }
