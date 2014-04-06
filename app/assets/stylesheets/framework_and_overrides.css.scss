@@ -205,6 +205,10 @@ img {
        url('myfont.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+#meme-title {
+  font-weight: 100;
+}
+
 .top-comment {
   font-size: 4em;
   color: white;
@@ -212,7 +216,7 @@ img {
   -webkit-text-stroke-color: black;
   font-family: 'MemeFont', Fallback, sans-serif;
   position: relative;
-  bottom: 435px;
+  bottom: 80px;
 }
 .checkbox input{
   &[type="checkbox"]{

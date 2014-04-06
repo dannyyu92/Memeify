@@ -1,6 +1,6 @@
 .container
   = link_to 'Add A Meme', new_meme_path, class: "button pull-right", style: "width: 120px;"
-  %h1 Memes:
+  %h1{id:'meme-title'} Memes
   .row
     .col-md-12
       - @memes.each do |m|
