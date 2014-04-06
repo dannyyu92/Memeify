@@ -2,8 +2,8 @@
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    /%title= content_for?(:title) ? yield(:title) : 'Memeify'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Memeify'}"}
+    %title= content_for?(:title) ? yield(:title) : 'Memify'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Memify'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -11,3 +11,4 @@
     = render 'layouts/messages'
     = render 'layouts/navigation'
     = yield
+    = render 'layouts/footer'
