@@ -140,7 +140,10 @@ body{
   overflow:hidden;
 }
 
-.sub_btn{
+.button{
   width:100%;
-  margin-top: 10px
+  margin-top: 10px;
+  @extend .btn;
+  @extend .btn-info;
+  @extend .sub_btn;
 }
