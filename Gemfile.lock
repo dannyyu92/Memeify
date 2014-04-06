@@ -56,6 +56,9 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -156,10 +159,12 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
+  figaro
   haml
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
+  mail
   paperclip (~> 4.1)
   pg (= 0.15.1)
   quiet_assets
