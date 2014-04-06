@@ -1,12 +1,17 @@
-.container-fluid
-  
+.container-fluid  
   .bg
-  .page-header.center
+  .authform.col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-4.col-md-4.col-md-offset-4.bg-info{id:'login-panel'}
     %h1{id:'logo'} Memify
-  = form_tag session_path(:user) do
-    = text_field_tag 'user[username]'
-    = password_field_tag 'user[password]'
-    = check_box_tag 'user[remember_me]'
-    = label_tag 'user[remember_me]', 'Remember me'
-    %button "Sign in"
-    = link_to "Forgot your password?", new_password_path(:user)
+    = form_tag session_path(:user) do
+      .login-field
+        %p.login-label USER
+        = text_field_tag 'user[username]'
+      .login-field
+        %p.login-label PASSWORD
+        = password_field_tag 'user[password]'
+      .login-field
+        = label_tag 'user[remember_me]', 'Remember me', { class: "login-label" }
+        = check_box_tag 'user[remember_me]'
+      .login-field
+        %button "Sign in"
+        = link_to "Forgot your password?", new_password_path(:user)
